@@ -21,7 +21,7 @@ const Infinite = ({ children, className, isLastPage, isLoading, onLoadMore }) =>
 
     function handleScroll() {
         if (
-            window.innerHeight + window.scrollY + 1000 >= document.body.offsetHeight &&
+            window.innerHeight + window.scrollY >= document.body.offsetHeight &&
             !isLastPage &&
             !isLoading
         ) {

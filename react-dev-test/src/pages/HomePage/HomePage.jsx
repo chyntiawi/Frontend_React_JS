@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { HomePageActionCreator } from './actions';
+import MovieCard from './components/MovieCard';
+import './HomePage.css';
 
 const HomePage = ({ getList, isLoading, movies }) => {
     React.useEffect(() => {
@@ -10,8 +12,14 @@ const HomePage = ({ getList, isLoading, movies }) => {
 
     return (
         <>
-            <div>List of Movies</div>
-            <div>{isLoading ? 'Loading...' : movies.map((movie) => <div>{movie.Poster}</div>)}</div>
+            <h2 className='HomePage_Title'>List of Movies</h2>
+            <div className='HomePage_MovieList'>
+                {isLoading
+                    ? 'Loading...'
+                    : movies.map((movie) => (
+                          <MovieCard key={movie.imdbID} movie={movie}></MovieCard>
+                      ))}
+            </div>
         </>
     );
 };

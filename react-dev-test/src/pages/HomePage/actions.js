@@ -19,7 +19,7 @@ export class HomePageActionCreator {
                 .then((response) => {
                     if (response.status === 200) {
                         let { Search } = response.data;
-                        console.log(Search);
+
                         dispatch(GetListAction(Search));
                     }
                 })

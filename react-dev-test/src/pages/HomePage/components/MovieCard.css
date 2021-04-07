@@ -1,0 +1,15 @@
+.MovieCard {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0.5rem 0.25rem;
+    flex-basis: 0;
+    text-align: center;
+}
+
+.MovieCard_Image {
+    height: 350px;
+}
+
+.MovieCard_Title {
+    margin: 0.5rem;
+}

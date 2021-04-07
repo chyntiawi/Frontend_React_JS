@@ -1,0 +1,8 @@
+.HomePage_Title {
+    text-align: center;
+}
+
+.HomePage_MovieList {
+    display: flex;
+    flex-flow: wrap;
+}
